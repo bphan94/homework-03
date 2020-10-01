@@ -2,9 +2,14 @@
 //variables that make up the password
 var generateBtn = document.querySelector("#generate");
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var numChar = "0123456789"
-//uses unicode for special characters and then joins them with .join
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numChar = "0123456789";
+
+//using special characters that are typically found on keyboard, quick and easy
+//toggle to use either line of code
+// var specialChar = "!@#$%^&*()_-+=";
+
+//uses unicode for special characters and then joins them with .join, more complex and more characters
 var specialChar = [
   "\u0021",
   "\u0022",
