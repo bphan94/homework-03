@@ -1,8 +1,10 @@
 // Assignment Code
+//variables that make up the password
 var generateBtn = document.querySelector("#generate");
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var numChar = "0123456789"
+//uses unicode for special characters and then joins them with .join
 var specialChar = [
   "\u0021",
   "\u0022",
@@ -47,6 +49,7 @@ function generator(length, charList) {
   return password;
 }
 
+//variables thats are included in password by user
 function generatePassword() {
   var passLength;
   var includeLower;
