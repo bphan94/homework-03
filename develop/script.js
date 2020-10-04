@@ -4,45 +4,7 @@ var generateBtn = document.querySelector("#generate");
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numChar = "0123456789";
-
-//using special characters that are typically found on keyboard, quick and easy
-//toggle to use either line of code
-// var specialChar = "!@#$%^&*()_-+=";
-
-//uses unicode for special characters and then joins them with .join, more complex and more characters
-var specialChar = [
-  "\u0021",
-  "\u0022",
-  "\u0023",
-  "\u0024",
-  "\u0025",
-  "\u0026",
-  "\u0027",
-  "\u0028",
-  "\u0029",
-  "\u002a",
-  "\u002b",
-  "\u002c",
-  "\u002d",
-  "\u002e",
-  "\u002f",
-  "\u003a",
-  "\u003b",
-  "\u003c",
-  "\u003d",
-  "\u003e",
-  "\u003f",
-  "\u0040",
-  "\u005b",
-  "\u005d",
-  "\u005e",
-  "\u005f",
-  "\u0060",
-  "\u007b",
-  "\u007c",
-  "\u007d",
-  "\u007e"
-].join("");
+var specialChar = [' ', '!', '"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\'', ']', '^', '_', '`', '{', '|', '}', '~'];
 
 function generator(length, charList) {
   var password = "";
@@ -54,7 +16,7 @@ function generator(length, charList) {
   return password;
 }
 
-//variables thats are included in password by user
+// variables thats are included in password by user
 function generatePassword() {
   var passLength;
   var includeLower;
@@ -62,6 +24,7 @@ function generatePassword() {
   var includeNum;
   var includeSpecial;
   var charList = "";
+
 
   // Users password length has to be more than 8 char, less than 128 char. User also has to input a NUMBER as the length. 
   //prompts user for desired length of password
